@@ -1,0 +1,11 @@
+name = "ITLApp"
+uuid = "28f5815c-84d7-48f2-900e-64d9336e704a"
+authors = ["cbarrows <clayton.barrows@nrel.gov>"]
+version = "0.1.0"
+
+[deps]
+Dash = "1b08a953-4be3-4667-9a23-3db579824955"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+HiGHS = "87dc4568-4c63-4d18-b0c0-bb2238e4078b"
+InterfaceLimits = "e431586a-0d4c-4f33-917e-c5f3a3b2c228"
+PowerSystems = "bcd98974-b02a-5e2f-9ee0-a103f5c450dd"
