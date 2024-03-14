@@ -13,10 +13,10 @@ in a web app interface like the one shown here:
 julia> ]add https://github.com/nrel-sienna/ITLApp.jl
 ```
 
-### PowerSystems Explorer
+### ITLApp
 
-This application allows users to browse PowerSystems components and time series data in a web UI
-via Plotly Dash. Here's how to start it:
+This application allows users to load a load flow case data and calculate interface transfer limits
+in a web UI via Plotly Dash. Here's how to start it:
 
 ```julia
 julia> using ITLApp
@@ -26,16 +26,6 @@ julia> run_itl_app()
 ```
 
 Open your browser to the IP address and port listed. In this case: `http://0.0.0.0:8050`.
-The System Explorer app will appear with three tabs:
-
-- System: enter a path to a raw data file or serialized JSON and load the system.
-Component data can be explored by type, and can be sorted and filtered.
-- Time Series: time series data for components selected on the "System" tab can be viewed
-and visualized
-- Maps: a shapefile can be loaded (optional), and nodes (`Bus`) and `Branch`s can be plotted.
-Several configuration options provide opportunities to visualize the geo-spatial data.
-*note: geospatial layouts are significantly more useful when "latitude" and "longitude" is defined
-in the `Bus.ext` fields. Without bus coordinates, an automatic layout will be applied*
 
 ## Developers
 
