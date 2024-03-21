@@ -1,6 +1,6 @@
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.10.1"
+julia_version = "1.10.2"
 manifest_format = "2.0"
 project_hash = "ba16556c9c1c64fe3303ace6cf3f412d2f433527"
 
@@ -293,7 +293,9 @@ uuid = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
 
 [[deps.InterfaceLimits]]
 deps = ["DataFrames", "JuMP", "PowerNetworkMatrices", "PowerSystems"]
-path = "../InterfaceLimits.jl"
+git-tree-sha1 = "0544b39d57d84e6c7a3180e02b50bfa5adeb45f9"
+repo-rev = "cb/hvdc"
+repo-url = "https://github.com/NREL-Sienna/InterfaceLimits.jl"
 uuid = "e431586a-0d4c-4f33-917e-c5f3a3b2c228"
 version = "0.1.1"
 

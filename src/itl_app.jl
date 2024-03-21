@@ -317,7 +317,20 @@ callback!(
     State("load_description", "value"),
 ) do loading_system, n_clicks, system_path, load_description
     n_clicks <= 0 && throw(PreventUpdate())
-    system = System(system_path, time_series_read_only = true)
+    
+    system = 
+    if (ismfile(system_path))
+        System(system_path, time_series_read_only = true)
+    elseif (israwfile(system_path))
+        System(system_path, 
+               bus_name_formatter = x->string(strip(x["name"])*"_"*string(x["index"])),
+               load_name_formatter = x-> x["source_id"][1]*"_$(x["source_id"][2])~"*strip(x["source_id"][3]),
+               branch_name_formatter = pm_branch_name_formatting, 
+               time_series_read_only = true)
+    else
+        error("Unrecognised System format..")
+    end
+
     g_data.system = system
     return (
         loading_system,
